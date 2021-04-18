@@ -143,25 +143,27 @@ namespace two_digits_display {
     //% blockId="show_two_digits_number" block="Display the number on the screen in two digits %value"
     //% parts="two_digits_display"
     export function showTwoDigitsNumber (value: number) {
-        serial.writeNumber(value)
-        serial.writeString("->")
         let _value = Math.round(value * 10)
-        serial.writeNumber(_value)
-        serial.writeLine("")
         if (_value % 10 == 0) { // 整数
-            if(_value < 100){ // 0~9かつ整数
+            if(_value < 100){
                 showDot(true)
-                showTwoColumnNumber(0, (_value / 10) % 10)
+                showTwoColumnNumber(0, Math.trunc(_value / 10) % 10)
                 showTwoColumnNumber(3, 0)
             }else{
                 showDot(false)
-                showTwoColumnNumber(0, (_value / 100) % 10)
-                showTwoColumnNumber(3, (_value / 10) % 10)
+                showTwoColumnNumber(0, Math.trunc(_value / 100) % 10)
+                showTwoColumnNumber(3, Math.trunc(_value / 10) % 10)
             }
         } else {
-            showDot(true)
-            showTwoColumnNumber(0, (_value) / 10)
-            showTwoColumnNumber(3, (_value) % 10)
+            if(_value < 100){
+                showDot(true)
+                showTwoColumnNumber(0, Math.trunc(_value / 10) % 10)
+                showTwoColumnNumber(3, _value % 10)
+            }else{
+                showDot(false)
+                showTwoColumnNumber(0, Math.trunc(_value / 100) % 10)
+                showTwoColumnNumber(3, Math.trunc(_value / 10) % 10)
+            }
         }
     }
 
