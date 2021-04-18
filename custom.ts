@@ -1,12 +1,7 @@
 /**
- * このファイルを使って、独自の関数やブロックを定義してください。
- * 詳しくはこちらを参照してください：https://makecode.microbit.org/blocks/custom
+ * Display the number on the screen in two digits.
  */
-
-/**
- * LEDに2桁表示を行います
- */
-//% weight=100 color=#5C2D91 icon="\uf26c" block="2桁表示"
+//% weight=100 color=#5C2D91 icon="\uf26c" block="TwoDigitsDisplay"
 namespace two_digits_display {
     function showTwoColumnNumber (startColomn: number, value: number) {
         if (startColomn < 0 || startColomn > 3) {
@@ -141,8 +136,8 @@ namespace two_digits_display {
     }
 
     /**
-     * ディスプレイに2桁表示を行います
-     * @param value 0.0-99の数値, eg: 0
+     * Display the number on the screen in two digits.
+     * @param value 0.0-99 numbers, eg: 0
      */
     //% block
     export function showTwoDigitsNumber (value: number) {
