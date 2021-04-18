@@ -1,5 +1,6 @@
 {
     "name": "LED2桁表示",
+    "version": "0.0.1",
     "description": "",
     "dependencies": {
         "core": "*",
