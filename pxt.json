@@ -1,7 +1,8 @@
 {
     "name": "TwoDigitsDisplay",
     "version": "1.0.0",
-    "description": "",
+    "description": "Displays two digits (0-99) on LED display",
+    "license": "MIT",
     "dependencies": {
         "core": "*",
         "radio": "*",
@@ -16,6 +17,7 @@
     "testFiles": [
         "test.ts"
     ],
+    "public": true,
     "supportedTargets": [
         "microbit"
     ],
