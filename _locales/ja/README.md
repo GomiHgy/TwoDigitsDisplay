@@ -3,13 +3,9 @@
 micro:bitのLEDディスプレイに0-99の2桁表示を行います。
 0-9.9の間は小数点が表示されます。
 
-## このプロジェクトを編集します ![ビルド ステータス バッジ](https://github.com/gomihgy/twodigitsdisplay/workflows/MakeCode/badge.svg)
+## サポート
 
-MakeCode でこのリポジトリを編集します。
-
-* [https://makecode.microbit.org/](https://makecode.microbit.org/) を開く
-* **読み込む** をクリックし、 **URLから読み込む...** をクリックしてください
-* **https://github.com/gomihgy/twodigitsdisplay** を貼り付けてインポートをクリックしてください
+for PXT/microbit
 
 ## ブロックのプレビュー
 

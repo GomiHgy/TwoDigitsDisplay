@@ -3,13 +3,9 @@
 Displays two digits (0-99) on the micro:bit LED display.
 A decimal point will be displayed between 0-9.9.
 
-## このプロジェクトを編集します ![ビルド ステータス バッジ](https://github.com/gomihgy/twodigitsdisplay/workflows/MakeCode/badge.svg)
+## Supported targets
 
-MakeCode でこのリポジトリを編集します。
-
-* [https://makecode.microbit.org/](https://makecode.microbit.org/) を開く
-* **読み込む** をクリックし、 **URLから読み込む...** をクリックしてください
-* **https://github.com/gomihgy/twodigitsdisplay** を貼り付けてインポートをクリックしてください
+for PXT/microbit
 
 ## ブロックのプレビュー
 
