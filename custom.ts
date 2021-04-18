@@ -137,10 +137,10 @@ namespace two_digits_display {
 
     /**
      * Display the number on the screen in two digits.
-     * 
      * @param value 0.0-99 numbers, eg: 0
      */
     //% blockId="show_two_digits_number" block="Display the number on the screen in two digits %value"
+    //% parts="two_digits_display"
     export function showTwoDigitsNumber (value: number) {
         serial.writeNumber(value)
         serial.writeString("->")
