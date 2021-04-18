@@ -1,3 +1,4 @@
 {
+    "two_digits_display.TwoDigitsDisplay|block": "2桁表示",
     "two_digits_display.showTwoDigitsNumber|block": "%strip|を2桁で表示する"
 }

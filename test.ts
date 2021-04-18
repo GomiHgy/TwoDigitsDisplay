@@ -3,6 +3,7 @@ two_digits_display.showTwoDigitsNumber(0)
 let temp = 0.1
 serial.writeNumber(temp)
 serial.writeLine("")
+two_digits_display.showTwoDigitsNumber(1)
 while (!(input.buttonIsPressed(Button.A))) {
 	
 }

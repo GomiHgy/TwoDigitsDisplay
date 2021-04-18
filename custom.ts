@@ -1,7 +1,8 @@
 /**
  * Display the number on the screen in two digits.
  */
-//% weight=100 color=#5C2D91 icon="\uf26c" block="TwoDigitsDisplay"
+//% blockId="two_digits_display" block="TwoDigitsDisplay"
+//% weight=100 color=#5C2D91 icon="\uf26c"
 namespace two_digits_display {
     function showTwoColumnNumber (startColomn: number, value: number) {
         if (startColomn < 0 || startColomn > 3) {
