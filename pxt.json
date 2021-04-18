@@ -1,5 +1,5 @@
 {
-    "name": "2桁表示テスト",
+    "name": "LED2桁表示",
     "description": "",
     "dependencies": {
         "core": "*",
