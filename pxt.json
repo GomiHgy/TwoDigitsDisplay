@@ -10,7 +10,8 @@
     "files": [
         "README.md",
         "custom.ts",
-        "_locales/ja/README.md"
+        "_locales/ja/README.md",
+        "_locales/ja/TwoDigitsDisplay-strings.json"
     ],
     "testFiles": [
         "test.ts"
