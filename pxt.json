@@ -1,5 +1,5 @@
 {
-    "name": "LED2桁表示",
+    "name": "TwoDigitsDisplay",
     "version": "0.0.1",
     "description": "",
     "dependencies": {
