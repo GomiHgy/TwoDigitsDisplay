@@ -1,14 +1,7 @@
+# TwoDigitsDisplay
 
-> このページを開く [https://gomihgy.github.io/twodigitsdisplay/](https://gomihgy.github.io/twodigitsdisplay/)
-
-## 拡張機能として使用
-
-このリポジトリは、MakeCode で **拡張機能** として追加できます。
-
-* [https://makecode.microbit.org/](https://makecode.microbit.org/) を開く
-* **新しいプロジェクト** をクリックしてください
-* ギアボタンメニューの中にある **拡張機能** をクリックしてください
-* **https://github.com/gomihgy/twodigitsdisplay** を検索してインポートします。
+Displays two digits (0-99) on the micro:bit LED display.
+A decimal point will be displayed between 0-9.9.
 
 ## このプロジェクトを編集します ![ビルド ステータス バッジ](https://github.com/gomihgy/twodigitsdisplay/workflows/MakeCode/badge.svg)
 
