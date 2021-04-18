@@ -9,7 +9,7 @@
     },
     "files": [
         "README.md",
-        "custom.ts",
+        "two_digits_display.ts",
         "_locales/ja/README.md",
         "_locales/ja/TwoDigitsDisplay-strings.json"
     ],
