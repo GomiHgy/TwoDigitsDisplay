@@ -9,3 +9,7 @@ micro:bitのLEDディスプレイに0-99の数の2桁表示を行います。0-9
 ## サポート
 
 * for PXT/microbit
+
+## ライセンス
+
+MIT
