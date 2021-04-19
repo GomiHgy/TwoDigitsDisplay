@@ -256,10 +256,14 @@ namespace two_digits_display {
     }
 
     function showDot (enable: boolean) {
+        led.unplot(2, 0)
+        led.unplot(2, 1)
+        led.unplot(2, 2)
+        led.unplot(2, 3)
         if (enable) {
             led.plotBrightness(2, 4, 50)
         } else {
-            led.plotBrightness(2, 4, 0)
+            led.unplot(2, 4)
         }
     }
 }
