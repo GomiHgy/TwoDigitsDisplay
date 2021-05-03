@@ -13,7 +13,7 @@ for (let index = 0; index <= 990; index++) {
     two_digits_display.showTwoDigitsNumber(index * 0.1)
     basic.pause(100)
 }
-// Displays 0 to 255 in hexadecimal
+// Displays 0 to 255(FF) in hexadecimal
 for (let index = 0; index <= 255; index++) {
     two_digits_display.showTwoDigitsHexNumber(index)
     basic.pause(50)
@@ -22,7 +22,7 @@ for (let index = 0; index <= 255; index++) {
 
 Use ``||showTwoDigitsNumber||`` to display 0.0-99 in decimal.
 
-Use ``||showTwoDigitsHexNumber||`` to display 0-255 in hexadecimal.
+Use ``||showTwoDigitsHexNumber||`` to display 0-255(FF) in hexadecimal.
 
 ## Original
 [Tweets](https://twitter.com/tsjmt/status/1383378812574961668) by [tsjmt](https://twitter.com/tsjmt)
