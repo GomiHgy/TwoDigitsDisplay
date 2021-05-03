@@ -7,20 +7,9 @@ It is also possible to display two hexadecimal digits of an integer.
 
 ## Basic usage
 
-```blocks
-// Displays 0.0 to 99 in decimal
-for (let index = 0; index <= 990; index++) {
-    two_digits_display.showTwoDigitsNumber(index * 0.1)
-    basic.pause(50)
-}
-// Displays 0 to 255(FF) in hexadecimal
-for (let index = 0; index <= 255; index++) {
-    two_digits_display.showTwoDigitsHexNumber(index)
-    basic.pause(100)
-}
-```
+![demo2](demo2.gif)
 
-![image](https://user-images.githubusercontent.com/10735253/116892391-bfd74880-ac6a-11eb-8ef3-3db4a368f2be.png)
+![image](https://user-images.githubusercontent.com/10735253/116894206-c36bcf00-ac6c-11eb-94ee-e847bab17ee1.png)
 
 Use ``||show number ~||`` to display 0.0-99 in decimal.
 
