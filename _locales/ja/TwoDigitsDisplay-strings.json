@@ -1,5 +1,5 @@
 {
     "two_digits_display|block": "2桁表示",
-    "two_digits_display.showTwoDigitsNumber|block": "%strip|を2桁で表示する",
+    "two_digits_display.showTwoDigitsNumber|block": "%strip|を2桁で表示する(整数部のみ表示する%integerOnly)",
     "two_digits_display.showTwoDigitsHexNumber|block": "%strip|を16進2桁で表示する"
 }
