@@ -4,6 +4,14 @@
 //% blockId="two_digits_display" block="TwoDigitsDisplay"
 //% weight=100 color=#5C2D91 icon="\uf26c"
 namespace two_digits_display {
+    let ledData = [
+        [ 0b11, 0b01, 0b11, 0b11, 0b10, 0b11, 0b11, 0b11, 0b11, 0b11, 0b10, 0b11, 0b11, 0b10, 0b11, 0b11 ],
+        [ 0b11, 0b01, 0b01, 0b01, 0b11, 0b10, 0b10, 0b01, 0b11, 0b11, 0b11, 0b11, 0b10, 0b11, 0b10, 0b10 ],
+        [ 0b11, 0b01, 0b11, 0b11, 0b11, 0b11, 0b11, 0b01, 0b00, 0b11, 0b11, 0b10, 0b10, 0b11, 0b11, 0b11 ],
+        [ 0b11, 0b01, 0b10, 0b01, 0b01, 0b01, 0b11, 0b01, 0b11, 0b01, 0b11, 0b11, 0b10, 0b11, 0b10, 0b10 ],
+        [ 0b11, 0b01, 0b11, 0b11, 0b01, 0b11, 0b11, 0b01, 0b11, 0b11, 0b11, 0b11, 0b11, 0b10, 0b11, 0b10 ]
+    ];
+
     /**
      * Display the number on the screen in two digits.
      * @param value 0.0-99 numbers, eg: 0
@@ -62,6 +70,9 @@ namespace two_digits_display {
         showTwoColumnNumber(3, _value % 16)
     }
 
+    /*
+     * 指定位置に2列数字を表示する
+     */
     function showTwoColumnNumber (startColomn: number, value: number) {
         if (startColomn < 0 || startColomn > 3) {
             return
@@ -69,208 +80,25 @@ namespace two_digits_display {
         if (value < 0 || value > 15) {
             return
         }
-
-        switch(value){
-            case 0:
-                led.plot(startColomn, 0)
-                led.plot(startColomn, 1)
-                led.plot(startColomn, 2)
-                led.plot(startColomn, 3)
-                led.plot(startColomn, 4)
-                led.plot(startColomn + 1, 0)
-                led.plot(startColomn + 1, 1)
-                led.plot(startColomn + 1, 2)
-                led.plot(startColomn + 1, 3)
-                led.plot(startColomn + 1, 4)
-            break;
-            case 1:
-                led.unplot(startColomn, 0)
-                led.unplot(startColomn, 1)
-                led.unplot(startColomn, 2)
-                led.unplot(startColomn, 3)
-                led.unplot(startColomn, 4)
-                led.plot(startColomn + 1, 0)
-                led.plot(startColomn + 1, 1)
-                led.plot(startColomn + 1, 2)
-                led.plot(startColomn + 1, 3)
-                led.plot(startColomn + 1, 4)
-            break;
-            case 2:
-                led.plot(startColomn, 0)
-                led.unplot(startColomn, 1)
-                led.plot(startColomn, 2)
-                led.plot(startColomn, 3)
-                led.plot(startColomn, 4)
-                led.plot(startColomn + 1, 0)
-                led.plot(startColomn + 1, 1)
-                led.plot(startColomn + 1, 2)
-                led.unplot(startColomn + 1, 3)
-                led.plot(startColomn + 1, 4)
-            break;
-            case 3:
-                led.plot(startColomn, 0)
-                led.unplot(startColomn, 1)
-                led.plot(startColomn, 2)
-                led.unplot(startColomn, 3)
-                led.plot(startColomn, 4)
-                led.plot(startColomn + 1, 0)
-                led.plot(startColomn + 1, 1)
-                led.plot(startColomn + 1, 2)
-                led.plot(startColomn + 1, 3)
-                led.plot(startColomn + 1, 4)
-            break;
-            case 4:
-                led.plot(startColomn, 0)
-                led.plot(startColomn, 1)
-                led.plot(startColomn, 2)
-                led.unplot(startColomn, 3)
-                led.unplot(startColomn, 4)
-                led.unplot(startColomn + 1, 0)
-                led.plot(startColomn + 1, 1)
-                led.plot(startColomn + 1, 2)
-                led.plot(startColomn + 1, 3)
-                led.plot(startColomn + 1, 4)
-            break;
-            case 5:
-                led.plot(startColomn, 0)
-                led.plot(startColomn, 1)
-                led.plot(startColomn, 2)
-                led.unplot(startColomn, 3)
-                led.plot(startColomn, 4)
-                led.plot(startColomn + 1, 0)
-                led.unplot(startColomn + 1, 1)
-                led.plot(startColomn + 1, 2)
-                led.plot(startColomn + 1, 3)
-                led.plot(startColomn + 1, 4)
-            break;
-            case 6:
-                led.plot(startColomn, 0)
-                led.plot(startColomn, 1)
-                led.plot(startColomn, 2)
-                led.plot(startColomn, 3)
-                led.plot(startColomn, 4)
-                led.plot(startColomn + 1, 0)
-                led.unplot(startColomn + 1, 1)
-                led.plot(startColomn + 1, 2)
-                led.plot(startColomn + 1, 3)
-                led.plot(startColomn + 1, 4)
-            break;
-            case 7:
-                led.plot(startColomn, 0)
-                led.unplot(startColomn, 1)
-                led.unplot(startColomn, 2)
-                led.unplot(startColomn, 3)
-                led.unplot(startColomn, 4)
-                led.plot(startColomn + 1, 0)
-                led.plot(startColomn + 1, 1)
-                led.plot(startColomn + 1, 2)
-                led.plot(startColomn + 1, 3)
-                led.plot(startColomn + 1, 4)
-            break;
-            case 8:
-                led.plot(startColomn, 0)
-                led.plot(startColomn, 1)
-                led.unplot(startColomn, 2)
-                led.plot(startColomn, 3)
-                led.plot(startColomn, 4)
-                led.plot(startColomn + 1, 0)
-                led.plot(startColomn + 1, 1)
-                led.unplot(startColomn + 1, 2)
-                led.plot(startColomn + 1, 3)
-                led.plot(startColomn + 1, 4)
-            break;
-            case 9:
-                led.plot(startColomn, 0)
-                led.plot(startColomn, 1)
-                led.plot(startColomn, 2)
-                led.unplot(startColomn, 3)
-                led.plot(startColomn, 4)
-                led.plot(startColomn + 1, 0)
-                led.plot(startColomn + 1, 1)
-                led.plot(startColomn + 1, 2)
-                led.plot(startColomn + 1, 3)
-                led.plot(startColomn + 1, 4)
-            break;
-            case 10:
-                led.plot(startColomn, 0)
-                led.plot(startColomn, 1)
-                led.plot(startColomn, 2)
-                led.plot(startColomn, 3)
-                led.plot(startColomn, 4)
-                led.unplot(startColomn + 1, 0)
-                led.plot(startColomn + 1, 1)
-                led.plot(startColomn + 1, 2)
-                led.plot(startColomn + 1, 3)
-                led.plot(startColomn + 1, 4)
-            break;
-            case 11:
-                led.plot(startColomn, 0)
-                led.plot(startColomn, 1)
-                led.plot(startColomn, 2)
-                led.plot(startColomn, 3)
-                led.plot(startColomn, 4)
-                led.plot(startColomn + 1, 0)
-                led.plot(startColomn + 1, 1)
-                led.unplot(startColomn + 1, 2)
-                led.plot(startColomn + 1, 3)
-                led.plot(startColomn + 1, 4)
-            break;
-            case 12:
-                led.plot(startColomn, 0)
-                led.plot(startColomn, 1)
-                led.plot(startColomn, 2)
-                led.plot(startColomn, 3)
-                led.plot(startColomn, 4)
-                led.plot(startColomn + 1, 0)
-                led.unplot(startColomn + 1, 1)
-                led.unplot(startColomn + 1, 2)
-                led.unplot(startColomn + 1, 3)
-                led.plot(startColomn + 1, 4)
-            break;
-            case 13:
-                led.plot(startColomn, 0)
-                led.plot(startColomn, 1)
-                led.plot(startColomn, 2)
-                led.plot(startColomn, 3)
-                led.plot(startColomn, 4)
-                led.unplot(startColomn + 1, 0)
-                led.plot(startColomn + 1, 1)
-                led.plot(startColomn + 1, 2)
-                led.plot(startColomn + 1, 3)
-                led.unplot(startColomn + 1, 4)
-            break;
-            case 14:
-                led.plot(startColomn, 0)
-                led.plot(startColomn, 1)
-                led.plot(startColomn, 2)
-                led.plot(startColomn, 3)
-                led.plot(startColomn, 4)
-                led.plot(startColomn + 1, 0)
-                led.unplot(startColomn + 1, 1)
-                led.plot(startColomn + 1, 2)
-                led.unplot(startColomn + 1, 3)
-                led.plot(startColomn + 1, 4)
-            break;
-            case 15:
-                led.plot(startColomn, 0)
-                led.plot(startColomn, 1)
-                led.plot(startColomn, 2)
-                led.plot(startColomn, 3)
-                led.plot(startColomn, 4)
-                led.plot(startColomn + 1, 0)
-                led.unplot(startColomn + 1, 1)
-                led.plot(startColomn + 1, 2)
-                led.unplot(startColomn + 1, 3)
-                led.unplot(startColomn + 1, 4)
-            break;
+        for(let x = 0; x < 2; x++) {
+            for(let y = 0; y < 5; y++) {
+                if((ledData[y][value] >> (1 - x) & 1) != 0){ 
+                    led.plot(startColomn + x, y)
+                }else{
+                    led.unplot(startColomn + x, y)
+                }
+            }
         }
     }
 
+    /*
+     * ドット部を表示する
+     */
     function showDot (enable: boolean) {
-        led.unplot(2, 0)
-        led.unplot(2, 1)
-        led.unplot(2, 2)
-        led.unplot(2, 3)
+        // ドット部以外の部分の表示を消去
+        for(let index = 0; index < 4; index++) {
+            led.unplot(2, index)
+        }
         if (enable) {
             led.plotBrightness(2, 4, 50)
         } else {
