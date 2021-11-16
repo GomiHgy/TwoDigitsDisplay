@@ -4,9 +4,7 @@
     "description": "Displays two digits (0-99) on LED display",
     "license": "MIT",
     "dependencies": {
-        "core": "*",
-        "radio": "*",
-        "microphone": "*"
+        "core": "*"
     },
     "files": [
         "README.md",
