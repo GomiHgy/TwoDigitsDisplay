@@ -13,13 +13,13 @@ namespace two_digits_display {
     ];
 
     /**
-     * Display the number on the screen in two digits.
+     * Display the number only integers on the screen in two digits.
      * @param value 0.0-99 numbers, eg: 0
      * @param integerOnly If true, display only integers, eg: false
      */
     //% blockId="show_two_digits_number" block="show number %value (Show only integers %integerOnly)"
     //% parts="two_digits_display"
-    export function showTwoDigitsNumber (value: number = 0, integerOnly : boolean = false) {
+    function showTwoDigitsNumber (value: number = 0, integerOnly : boolean = false) {
         // 整数表示のみ行う
         if(integerOnly){
             if(value < 100){
@@ -52,6 +52,26 @@ namespace two_digits_display {
                 showTwoColumnNumber(3, Math.trunc(_value / 10) % 10)
             }
         }
+    }
+
+    /**
+     * Display the number on the screen in two digits.
+     * @param value 0.0-99 numbers, eg: 0
+     */
+    //% blockId="show_two_digits_number" block="show number %value"
+    //% parts="two_digits_display"
+    export function showTwoDigitsDecimal(value: number = 0) {
+        showTwoDigitsNumber(value, false);
+    }
+
+    /**
+     * Display the number only integers on the screen in two digits.
+     * @param value 0-99 numbers, eg: 0
+     */
+    //% blockId="show_two_digits_number" block="show number only integers %value"
+    //% parts="two_digits_display"
+    export function showTwoDigitsInteger(value: number = 0) {
+        showTwoDigitsNumber(value, true);
     }
 
     /**
