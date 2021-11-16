@@ -1,6 +1,6 @@
 {
     "name": "TwoDigitsDisplay",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "description": "Displays two digits (0-99) on LED display",
     "license": "MIT",
     "dependencies": {
